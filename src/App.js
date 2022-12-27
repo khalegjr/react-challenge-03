@@ -19,8 +19,10 @@ function App() {
   };
 
   const calculateProgress = () => {
+    const totalKeys = Object.keys(data).length;
+
     let value = 0;
-    const amountToAdd = 25;
+    const amountToAdd = 100 / totalKeys;
 
     if (data.fullName.trim().split(" ").length > 1) {
       value += amountToAdd;
