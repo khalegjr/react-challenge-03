@@ -8,7 +8,17 @@ function App() {
     gender: "",
   });
 
-  const handleChange = () => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setData((prev) => {
+      const newData = { ...prev, [name]: value };
+
+      console.log(newData);
+      return newData;
+    });
+  };
+
   return (
     <div className="App">
       <h3>React Challenge 3</h3>
