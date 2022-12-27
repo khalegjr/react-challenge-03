@@ -19,6 +19,30 @@ function App() {
     });
   };
 
+  const calculateProgress = () => {
+    let value = 0;
+    const amountToAdd = 25;
+
+    if (data.fullName) {
+      value += amountToAdd;
+    }
+
+    if (data.email) {
+      value += amountToAdd;
+    }
+
+    if (data.maritalStatus) {
+      value += amountToAdd;
+    }
+
+    if (data.gender) {
+      value += amountToAdd;
+    }
+
+    console.log(value);
+    return value;
+  };
+
   return (
     <div className="App">
       <h3>React Challenge 3</h3>
@@ -26,7 +50,10 @@ function App() {
 
       <main>
         <div className="bar-container">
-          <div className="bar" style={{ width: "50%" }}></div>
+          <div
+            className="bar"
+            style={{ width: `${calculateProgress()}%` }}
+          ></div>
         </div>
 
         <div className="form-group">
