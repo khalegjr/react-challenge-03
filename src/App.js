@@ -44,6 +44,18 @@ function App() {
     return value;
   };
 
+  const handleClick = () => {
+    console.log("submmited");
+
+    alert("Formulário enviado com sucesso!");
+    setData({
+      fullName: "",
+      email: "",
+      maritalStatus: "",
+      gender: "",
+    });
+  };
+
   return (
     <div className="App">
       <h3>React Challenge 3</h3>
@@ -110,7 +122,9 @@ function App() {
             </span>
           </div>
         </div>
-        <button>Enviar Formulário</button>
+        <button onClick={handleClick} disabled={calculateProgress() !== 100}>
+          Enviar Formulário
+        </button>
       </main>
     </div>
   );
