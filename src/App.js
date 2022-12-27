@@ -14,7 +14,6 @@ function App() {
     setData((prev) => {
       const newData = { ...prev, [name]: value };
 
-      console.log(newData);
       return newData;
     });
   };
@@ -27,7 +26,10 @@ function App() {
       value += amountToAdd;
     }
 
-    if (data.email) {
+    let pattern =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (pattern.test(data.email)) {
       value += amountToAdd;
     }
 
@@ -39,7 +41,6 @@ function App() {
       value += amountToAdd;
     }
 
-    console.log(value);
     return value;
   };
 
