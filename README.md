@@ -15,7 +15,7 @@ Para aproveitar estilização já definida, crie:
 - select: __estado civil__,
 - radio: __gênero__
 
-Para validação de e-mail use a seguinte RegEx: ```/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)##)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;```
+Para validação de e-mail use a seguinte RegEx: ```/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;```
 
 ## FUNCIONAMENTO
 Espera-se que o formulário tenha 4 campos ao todo. Portanto, quando o usuário preencher o primeiro campo, a barra de progresso deve assumir 25% do tamanho total; o segundo campo, 50% e assim por diante...
