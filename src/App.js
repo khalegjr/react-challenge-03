@@ -25,7 +25,10 @@ function App() {
       <h1>progresso do formulário</h1>
 
       <main>
-        {/* crie a barra de progresso aqui */}
+        <div className="bar-container">
+          <div className="bar" style={{ width: "50%" }}></div>
+        </div>
+
         <div className="form-group">
           <label htmlFor="">Nome Completo</label>
           <input
