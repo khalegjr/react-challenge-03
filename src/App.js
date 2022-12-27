@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>React Challenge 3</h3>
+      <h1>progresso do formulário</h1>
+
+      <main>
+        {/* crie a barra de progresso aqui */}
+        <div className="form-group">
+          <label htmlFor="">Nome Completo</label>
+          <input />
+        </div>
+        <div className="form-group">
+          <label htmlFor="">E-mail</label>
+          <input />
+        </div>
+        <div className="form-group">
+          <label htmlFor="">Estado Civil</label>
+          <select>
+            <option value="">- selecione...</option>
+            <option value="solteiro">Solteiro</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="">Gênero</label>
+          <div className="radios-container">
+            <span>
+              <input type="radio" /> Masculino
+            </span>
+            <span>
+              <input type="radio" /> Feminino
+            </span>
+          </div>
+        </div>
+        <button>Enviar Formulário</button>
+      </main>
     </div>
   );
 }
