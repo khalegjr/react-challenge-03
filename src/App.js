@@ -5,7 +5,7 @@ function App() {
     fullName: "",
     email: "",
     maritalStatus: "",
-    genre: "",
+    gender: "",
   });
 
   const handleChange = () => {};
@@ -48,10 +48,24 @@ function App() {
           <label htmlFor="">Gênero</label>
           <div className="radios-container">
             <span>
-              <input type="radio" /> Masculino
+              <input
+                type="radio"
+                name="gender"
+                value="masculino"
+                onChange={handleChange}
+                checked={data.gender === "masculino"}
+              />
+              Masculino
             </span>
             <span>
-              <input type="radio" /> Feminino
+              <input
+                type="radio"
+                name="gender"
+                value="feminino"
+                onChange={handleChange}
+                checked={data.gender === "feminino"}
+              />
+              Feminino
             </span>
           </div>
         </div>
