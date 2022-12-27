@@ -23,7 +23,7 @@ function App() {
     let value = 0;
     const amountToAdd = 25;
 
-    if (data.fullName) {
+    if (data.fullName.trim().split(" ").length > 1) {
       value += amountToAdd;
     }
 
