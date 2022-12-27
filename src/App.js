@@ -1,4 +1,14 @@
+import { useState } from "react";
+
 function App() {
+  const [data, setData] = useState({
+    fullName: "",
+    email: "",
+    maritalStatus: "",
+    genre: "",
+  });
+
+  const handleChange = () => {};
   return (
     <div className="App">
       <h3>React Challenge 3</h3>
@@ -8,21 +18,32 @@ function App() {
         {/* crie a barra de progresso aqui */}
         <div className="form-group">
           <label htmlFor="">Nome Completo</label>
-          <input />
+          <input
+            name="fullName"
+            value={data.fullName}
+            onChange={handleChange}
+          />
         </div>
+
         <div className="form-group">
           <label htmlFor="">E-mail</label>
-          <input />
+          <input name="email" value={data.email} onChange={handleChange} />
         </div>
+
         <div className="form-group">
           <label htmlFor="">Estado Civil</label>
-          <select>
+          <select
+            name="maritalStatus"
+            value={data.maritalStatus}
+            onChange={handleChange}
+          >
             <option value="">- selecione...</option>
             <option value="solteiro">Solteiro</option>
             <option value="casado">Casado</option>
             <option value="divorciado">Divorciado</option>
           </select>
         </div>
+
         <div className="form-group">
           <label htmlFor="">Gênero</label>
           <div className="radios-container">
